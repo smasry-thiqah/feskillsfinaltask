@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
+    "preinstall": "if [ ! -z \"$NPMRC_AUTH\" ]; then echo \"${NPMRC_AUTH}\" >~/.npmrc; fi || true",
     "start": "ng serve",
     "build": "ng build",
     "build:prod": "ng build --production",
