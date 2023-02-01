@@ -1,0 +1,72 @@
+$input-group-inside-top: rem(10);
+.input-group.is-havingInside {
+  font-size: 16px;
+  position: relative;
+
+  .form-control {
+    border-top-#{$left}-radius: $input-border-radius !important;
+    border-bottom-#{$left}-radius: $input-border-radius !important;
+  }
+  .input-group-inside {
+    position: absolute;
+    font-size: 1.125rem;
+    #{$left}: $input-padding-x;
+    top: $input-group-inside-top;
+    height: calc(
+      calc(calc($input-padding-y - $input-group-inside-top) * 2) +
+        calc($input-line-height * $input-font-size)
+    );
+    z-index: 5;
+    color: $dark;
+
+    & > .icon {
+      vertical-align: inherit;
+      margin-top: $input-group-inside-top;
+    }
+    &::after {
+      display: block;
+      clear: both;
+      content: "";
+    }
+    &.is-reverse ~ .form-control {
+      padding-#{$right}: rem(60);
+    }
+    &:not(.is-reverse) ~ .form-control {
+      padding-#{$left}: rem(60);
+    }
+
+    &:not(.is-reverse) ~ textarea.form-control {
+      padding-top: 0.8rem;
+    }
+
+    &:not(.is-reverse)
+      ~ .select2
+      .select2-selection--single
+      .select2-selection__rendered {
+      padding-#{$left}: 2.5rem;
+    }
+    & ~ select.form-control {
+      padding-top: 3px;
+    }
+    &.is-reverse {
+      #{$left}: auto;
+      #{$right}: $input-padding-x;
+    }
+
+    &.is-reverse ~ .form-control.is-valid,
+    &.is-reverse ~ .form-control.is-invalid {
+      z-index: 6;
+    }
+  }
+}
+.btn-primary {
+  color: $white;
+  &:hover,
+  &:focus {
+    color: $white;
+  }
+}
+
+.container-fluid {
+  padding-inline: 100px;
+}

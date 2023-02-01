@@ -1,0 +1,80 @@
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.cursor-help {
+    cursor: help;
+}
+
+.cursor-move {
+    cursor: move;
+}
+
+.cursor-disable {
+    cursor: no-drop;
+}
+
+svg.icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
+}
+
+.btn.btn-icon {
+    background-color: transparent;
+    padding: 0;
+
+    &:focus,
+    &.focus {
+            /* outline: none; */
+    box-shadow: none;
+    }
+}
+
+.bg-trasparent {
+    background: transparent !important;
+}
+
+.show {
+    &-isEnglish {
+        display: defaultOrReverse(inline-block, none)!important;
+    }
+
+    &-isArabic {
+        display: defaultOrReverse(none, inline-block)!important;
+    }
+}
+
+.new-btn, .pending-btn, .aceptable-btn, .rejected-btn {
+    &, &:focus, &:active {
+        border: none;
+        box-shadow: none;
+        border-radius: 4px;
+        height: 28px;
+        width: 83px;
+        font-size: 12px;
+    }
+}
+
+.new-btn {
+    background-color: rgba(147, 193, 249, 0.5);
+    color: #458DFC;
+}
+
+.pending-btn {
+    background-color: rgba(183, 187, 204, 0.15);
+    color: rgba(32, 27, 57, 0.5);
+}
+
+.aceptable-btn {
+    background-color: rgba(162, 212, 94, 0.25);
+    color: #A2D45E;
+}
+
+.rejected-btn {
+    background-color: rgba(204, 53, 36, 0.25);
+    color: #CC3524;
+}

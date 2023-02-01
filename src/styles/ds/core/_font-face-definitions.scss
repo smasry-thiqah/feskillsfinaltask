@@ -1,0 +1,31 @@
+
+@if $isWantDefinByFontFace==true {
+    @each $font in $fonts-map {
+        $name: map-get($font, family);
+        $weight: map-get($font, weight);
+        $weightName: map-get($font, weightName);
+        $path: map-get($font, path);
+
+        @if(empty($path) and (empty($weightName) !=true)) {
+            $path: $fonts-path + '/'+ $name + '/'+ $name + '-'+ $weightName
+        }
+
+        @else if(empty($weightName) and (empty($path) !=true)) {
+            $path: $fonts-path + '/'+ $path;
+        }
+
+        @else if((empty($path) !=true) and (empty($weightName) !=true)) {
+            $path: $fonts-path + '/'+ $path + '-'+ $weightName;
+        }
+
+        @else {
+            $path: $fonts-path + '/'+ $name + '/'+ $name (+'-Regular');
+        }
+
+        @if(empty($weight)) {
+            $weight: '400';
+        }
+
+        @include setFontFamily($fFamily: #{$name}, $fWeight: #{$weight}, $full-path: #{$path});
+    }
+}

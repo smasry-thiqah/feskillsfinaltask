@@ -1,0 +1,45 @@
+//==  branding from css to root branding
+$branding-path: "/assets/" !default;
+$isWantDefinByFontFace: true;
+// =====================================
+// #####################################
+// Font weight
+// 200: Light
+// 400: Normal(Regular)
+// 600: SemiBold
+// 700: Bold
+// #####################################
+// ====================  Projects Colors
+$primary: #fbebb5; // ==== $primary  ====
+$primaryLight: #fff9e5;
+$secondary: #faf4f4; // ==== secondary ====
+$success: #6ecb98; // ==== success   ====
+$info: #ffae75; // ==== info      ====
+$warning: #e9dd76; // ==== warning   ====
+$danger: #cc3524; // ==== danger    ====
+$light: #ffffff; // ==== light     ====
+$dark: #333e48; // ==== dark      ====
+$muted: #9f9f9f;
+
+// Body
+//
+// Settings for the `<body>` element.
+$body-bg: #fff;
+// $body-color:                 #333E48;
+
+// Links
+// Style anchor elements.
+$link-color: $primary;
+$link-decoration: none;
+$link-hover-decoration: none;
+
+// buttons
+$btn-padding-y: rem(13);
+$btn-padding-x: 1rem;
+$btn-font-weight: 700;
+// $btn-font-family:             $input-btn-font-family;
+// $btn-font-size:               $input-btn-font-size;
+$btn-line-height: 22px;
+$btn-border-radius: 6px;
+
+$customGutter: rem(100);

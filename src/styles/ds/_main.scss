@@ -1,0 +1,38 @@
+// ===================[ Thiqah Co - FE Engineering Team - 2022 ]
+// ### =======================  [ Configrations ] ========================== ### //
+// $mainSiteLang : ar; // active the next variable if you want arabic direction
+// Defenition:: Functions, Variables, Mixins
+@import "core/initial"; // ::=> Set this partail to defined new style
+// // ### ===================================================================== ### //
+// // ### =============================  [ Core ] ============================= ### //
+// Helper additional classes
+// @import "settings/common/common";
+// @import "settings/common/larger";
+// @import "settings/common/rotated-flipped";
+
+// ### ===================================================================== ### //
+// ### ============================  [ Vendors ] =========================== ### //
+// [^\$](left|right|rtl|ltr)[^\}]                     // Partail Author  - MM-DD-YY
+@import "node_modules/@thiqah/dynamic-bootsrtap/bootstrap";
+@import "settings/bootstrapOverride-classes";
+//@import "~@ng-select/ng-select/themes/default.theme.css";
+$fa-font-path: "/assets/fonts/fontawesome-pro-6.1.2-web";
+@import "vendors/fontawesome-pro-6.1.1/brands";
+@import "vendors/fontawesome-pro-6.1.1/duotone";
+@import "vendors/fontawesome-pro-6.1.1/fontawesome";
+@import "vendors/fontawesome-pro-6.1.1/v4-shims";
+@import "vendors/fontawesome-pro-6.1.1/thin";
+@import "vendors/fontawesome-pro-6.1.1/solid";
+@import "vendors/fontawesome-pro-6.1.1/regular";
+@import "vendors/fontawesome-pro-6.1.1/light";
+// @import "~@ng-select/ng-select/themes/default.theme.css";
+// ### ===================================================================== ### //
+// ### ============================  [ Layouts ] =========================== ### //
+@import "layouts/home";
+
+// ### ===================================================================== ### //
+// ### ============================  [ Modules ] =========================== ### //
+@import "modules/master/header";
+@import "modules/master/footer";
+@import "modules/master/product";
+@import "modules/master/cart-modal";

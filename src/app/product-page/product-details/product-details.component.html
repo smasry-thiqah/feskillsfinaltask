@@ -1,0 +1,158 @@
+<section class="productDetails">
+  <div class="productDetails-container container-fluid">
+    <div class="productDetails-images">
+      <div class="productDetails-imagesList">
+        <div class="productDetails-imagesList-item">
+          <img src="assets/images/details2.png" alt="" />
+        </div>
+        <div class="productDetails-imagesList-item">
+          <img src="assets/images/details3.png" alt="" />
+        </div>
+        <div class="productDetails-imagesList-item">
+          <img src="assets/images/details4.png" alt="" />
+        </div>
+        <div class="productDetails-imagesList-item">
+          <img src="assets/images/details5.png" alt="" />
+        </div>
+      </div>
+      <div class="productDetails-largeImage">
+        <img src="assets/images/details1.png" alt="" />
+      </div>
+    </div>
+    <div class="productDetails-content">
+      <h1 class="productDetails-name">Asgaard sofa</h1>
+      <h2 class="productDetails-price">{{ 250000 | currency : "Rs. " }}</h2>
+      <div class="productDetails-rating">
+        <div class="productDetails-rating-starsContainer">
+          <span class="fa-stack productDetails-rating-star">
+            <i class="fa-solid fa-star fa-stack-1x"></i>
+            <i class="fa-thin fa-star fa-stack-1x"></i>
+          </span>
+          <span class="fa-stack productDetails-rating-star">
+            <i class="fa-solid fa-star fa-stack-1x"></i>
+            <i class="fa-thin fa-star fa-stack-1x"></i>
+          </span>
+          <span class="fa-stack productDetails-rating-star">
+            <i class="fa-solid fa-star fa-stack-1x"></i>
+            <i class="fa-thin fa-star fa-stack-1x"></i>
+          </span>
+          <span class="fa-stack productDetails-rating-star">
+            <i class="fa-solid fa-star fa-stack-1x"></i>
+            <i class="fa-thin fa-star fa-stack-1x"></i>
+          </span>
+          <span class="fa-stack productDetails-rating-star">
+            <i class="fa-solid fa-star-half fa-stack-1x"></i>
+            <i class="fa-thin fa-star fa-stack-1x"></i>
+          </span>
+        </div>
+        <div class="productDetails-reviewCount">
+          <p>5 Customer Review</p>
+        </div>
+      </div>
+      <div class="productDetails-shortDescription">
+        <p>
+          Setting the bar as one of the loudest speakers in its class, the
+          Kilburn is a compact, stout-hearted hero with a well-balanced audio
+          which boasts a clear midrange and extended highs for a sound.
+        </p>
+      </div>
+      <div class="productDetails-optionSelection">
+        <h5 class="productDetails-optionSelection-name">Size</h5>
+        <div
+          class="productDetails-optionSelection-options sizes"
+          role="group"
+          aria-label="Basic checkbox toggle button group"
+        >
+          <input type="radio" class="btn-check" id="sizeBtn1" name="size" />
+          <label class="btn productDetails-optionSelction-btn" for="sizeBtn1"
+            >L</label
+          >
+
+          <input type="radio" class="btn-check" id="sizeBtn2" name="size" />
+          <label class="btn productDetails-optionSelction-btn" for="sizeBtn2"
+            >XL</label
+          >
+
+          <input type="radio" class="btn-check" id="sizeBtn3" name="size" />
+          <label class="btn productDetails-optionSelction-btn" for="sizeBtn3"
+            >XS</label
+          >
+        </div>
+      </div>
+      <div class="productDetails-optionSelection">
+        <h5 class="productDetails-optionSelection-name">Color</h5>
+        <div
+          class="productDetails-optionSelection-options colors"
+          role="group"
+          aria-label="Basic checkbox toggle button group"
+        >
+          <input type="radio" class="btn-check" id="colorBtn1" name="color" />
+          <label
+            class="btn productDetails-optionSelction-btn"
+            for="colorBtn1"
+            [style.background]="'#816DFA'"
+          ></label>
+
+          <input type="radio" class="btn-check" id="colorBtn2" name="color" />
+          <label
+            class="btn productDetails-optionSelction-btn"
+            for="colorBtn2"
+            [style.background]="'#000000'"
+          ></label>
+
+          <input type="radio" class="btn-check" id="colorBtn3" name="color" />
+          <label
+            class="btn productDetails-optionSelction-btn"
+            for="colorBtn3"
+            [style.background]="'#CDBA7B'"
+          ></label>
+        </div>
+      </div>
+      <div class="productDetails-cartActions">
+        <div class="productDetails-cartActions-counter">
+          <button class="btn productDetails-cartActions-counterBtn">-</button>
+          <span class="productDetails-cartActions-couter-text">1</span>
+          <button class="btn productDetails-cartActions-counterBtn">+</button>
+        </div>
+        <button class="btn btn-block productDetails-cartActions-cartBtn">
+          Add To Cart
+        </button>
+      </div>
+      <hr class="productDetails-hr" />
+      <table class="table table-borderless productDetails-informationTable">
+        <tr>
+          <td>SKU</td>
+          <td>:</td>
+          <td>SS001</td>
+        </tr>
+        <tr>
+          <td>Category</td>
+          <td>:</td>
+          <td>Sofas</td>
+        </tr>
+        <tr>
+          <td>Tags</td>
+          <td>:</td>
+          <td>Sofa, Chair, Home, Shop</td>
+        </tr>
+        <tr>
+          <td>Share</td>
+          <td>:</td>
+          <td>
+            <div class="productDetails-shareList">
+              <a href="#" class="productDetails-shareItem">
+                <i class="fa-brands fa-facebook"></i>
+              </a>
+              <a href="#" class="productDetails-shareItem">
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+              <a href="#" class="productDetails-shareItem">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</section>

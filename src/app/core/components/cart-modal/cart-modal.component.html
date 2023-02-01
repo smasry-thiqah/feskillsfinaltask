@@ -1,0 +1,59 @@
+<div
+  class="modal fade cartModal"
+  id="cart-modal"
+  tabindex="-1"
+  aria-labelledby="cart-modal"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-fullscreen cartModal-dialog">
+    <div class="modal-content cartModal-content">
+      <div class="modal-body cartModal-body">
+        <div class="cartModal-cart">
+          <div class="cartModal-cart-container">
+            <div class="cartModal-cart-header">
+              <h3 class="cartModal-cart-title">Shopping Cart</h3>
+              <button
+                class="btn cartModal-cart-closeBtn"
+                data-bs-dismiss="modal"
+              >
+                <img src="assets/images/icons/close-cart.svg" alt="" />
+              </button>
+            </div>
+            <div class="cartModal-cart-list">
+              <div class="cartModal-cart-cartItem">
+                <div class="cartModal-cart-imageContainer">
+                  <img src="assets/images/details1.png" alt="" />
+                </div>
+                <div class="cartModal-cart-textContainer">
+                  <h5 class="cartModal-cart-itemName">Asgaard sofa</h5>
+                  <h6 class="cartModal-cart-itemQuantityContainer">
+                    <span class="cartModal-cart-itemQuantity">1</span>
+                    X
+                    <span class="cartModal-cart-itemPrice">
+                      {{ 250000 | currency : "Rs. " }}
+                    </span>
+                  </h6>
+                </div>
+                <button class="btn btn-block cartModal-cart-removeBtn">
+                  <img src="assets/images/icons/remove.svg" alt="" />
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="cartModal-cart-total">
+            <h4 class="cartModal-cart-totalText">Subtotal</h4>
+            <h4 class="cartModal-cart-totalPrice">
+              {{ 250000 | currency : "Rs. " }}
+            </h4>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer cartModal-footer">
+        <button type="button" class="btn cartModal-footer-btn">
+          View Cart
+        </button>
+        <button type="button" class="btn cartModal-footer-btn">Checkout</button>
+      </div>
+    </div>
+  </div>
+</div>

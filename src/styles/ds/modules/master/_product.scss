@@ -1,0 +1,308 @@
+.productDetails {
+  padding-top: rem(34);
+  padding-bottom: rem(34);
+  &-container {
+    display: flex;
+    gap: $customGutter;
+    justify-content: space-evenly;
+  }
+
+  &-images {
+    display: flex;
+    gap: rem(30);
+  }
+  &-largeImage {
+    max-width: 30vw;
+    height: rem(500);
+    background: $primaryLight;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &-imagesList {
+    display: flex;
+    width: rem(76);
+    flex-shrink: 0;
+    flex-grow: 0;
+    flex-direction: column;
+    gap: rem(32);
+
+    &-item {
+      width: rem(76);
+      height: rem(80);
+      background: $primaryLight;
+      border-radius: 10px;
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+  }
+
+  &-content {
+    flex-grow: 1;
+  }
+  &-name {
+    color: black;
+    margin: 0;
+    font-size: rem(42);
+    line-height: rem(64);
+  }
+  &-price {
+    color: #9f9f9f;
+    font-size: rem(24);
+    font-weight: 500;
+    line-height: rem(36);
+  }
+  &-rating {
+    display: flex;
+    gap: rem(40);
+    padding-top: rem(10);
+    padding-bottom: rem(10);
+    &-starsContainer {
+      display: flex;
+      gap: rem(8);
+    }
+    &-star {
+      width: rem(18);
+      height: rem(18);
+      color: #ffda5b;
+      line-height: rem(18);
+    }
+  }
+  &-reviewCount {
+    color: #9f9f9f;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 30px;
+      background: #9f9f9f;
+      #{$left}: rem(-20);
+      top: rem(-6);
+    }
+    p {
+      font-size: rem(13);
+      margin: 0;
+    }
+  }
+  &-shortDescription {
+    p {
+      font-size: rem(13);
+      line-height: rem(20);
+      padding-bottom: rem(20);
+      color: black;
+      max-width: rem(424);
+    }
+  }
+  &-optionSelection {
+    margin-bottom: rem(18);
+    &-name {
+      color: #9f9f9f;
+      font-size: rem(14);
+      font-weight: 400;
+      margin-bottom: rem(12);
+    }
+    &-options {
+      display: flex;
+      gap: rem(16);
+      .productDetails-optionSelction-btn {
+        width: rem(30);
+        height: rem(30);
+      }
+      &.sizes {
+        input:checked + .productDetails-optionSelction-btn {
+          background: $primary;
+        }
+        .productDetails-optionSelction-btn {
+          border-radius: 5px;
+          background: $secondary;
+          font-size: rem(13);
+          font-weight: 400;
+          color: black;
+          padding: rem(5);
+        }
+      }
+      &.colors {
+        input:checked + .productDetails-optionSelction-btn {
+          outline: 4px solid $primary;
+        }
+        .productDetails-optionSelction-btn {
+          border-radius: rem(50);
+          padding: 0;
+        }
+      }
+    }
+  }
+  &-cartActions {
+    display: flex;
+    gap: rem(18);
+    margin-top: rem(32);
+    margin-bottom: rem(60);
+    &-counter {
+      display: flex;
+      border: 1px solid #9f9f9f;
+      border-radius: 10px;
+      height: rem(64);
+      width: rem(128);
+      justify-content: space-between;
+      align-items: center;
+    }
+    &-counterBtn {
+      font-size: rem(16);
+      font-weight: 400;
+      padding: rem(12);
+    }
+    &-cartBtn {
+      display: grid;
+      place-items: center;
+      font-size: rem(20);
+      font-weight: 400;
+      border: 1px solid black;
+      border-radius: rem(15);
+      height: rem(64);
+      width: rem(215);
+    }
+  }
+  &-hr {
+    width: 100%;
+    background: #d9d9d9;
+    height: 1px;
+    margin-bottom: rem(40);
+  }
+  &-informationTable {
+    width: auto;
+    tr {
+      td {
+        color: #9f9f9f;
+        font-size: rem(16);
+        padding-bottom: rem(12);
+        padding-#{$right}: rem(16);
+      }
+    }
+  }
+  &-shareList {
+    display: flex;
+    gap: rem(25);
+    padding: 0 !important;
+  }
+  &-shareItem {
+    color: black;
+  }
+}
+
+.productDescription {
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+  padding-top: rem(48);
+  padding-bottom: rem(64);
+
+  &-navigation {
+    display: flex;
+    gap: rem(54);
+    justify-content: center;
+    margin-bottom: rem(36);
+    &-title {
+      font-size: rem(24);
+      line-height: rem(36);
+      color: #9f9f9f;
+      cursor: pointer;
+      font-weight: 400;
+      &.is-active {
+        color: black;
+      }
+    }
+  }
+
+  &-content {
+    &-container {
+      margin-bottom: rem(36);
+    }
+    &-text {
+      color: #9f9f9f;
+      margin: 0;
+      text-align: justify;
+      &:not(:last-of-type) {
+        margin-bottom: rem(30);
+      }
+    }
+  }
+  &-images {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: rem(30);
+
+    &-imageContainer {
+      background: $primaryLight;
+      border-radius: 10px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.relatedProducts {
+  &-title {
+    font-weight: 500;
+    color: black;
+    font-size: rem(36);
+    line-height: rem(54);
+    text-align: center;
+    padding: rem(55);
+  }
+  &-list {
+    display: flex;
+    margin-bottom: rem(84);
+  }
+  &-card {
+    width: 25%;
+    &-imageContainer {
+      height: rem(300);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: rem(14);
+      img {
+        max-width: 80%;
+        max-height: 80%;
+      }
+    }
+    &-title {
+      font-size: rem(16);
+      font-weight: 400;
+      color: black;
+      margin-bottom: rem(12);
+    }
+    &-price {
+      font-size: rem(24);
+      font-weight: 500;
+      color: black;
+    }
+  }
+  &-footer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: rem(96);
+  }
+  &-seeMoreBtn {
+    padding-inline: rem(8);
+    padding-top: rem(18);
+    padding-bottom: rem(18);
+    border-bottom: 2px solid black;
+    font-size: rem(20);
+    font-weight: 500;
+    line-height: rem(30);
+    border-radius: 0;
+  }
+}

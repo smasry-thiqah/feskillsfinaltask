@@ -1,0 +1,62 @@
+/*!
+ * Thiqah Branding v5.1.1   (::)   English language
+ * Copyright 2019 Thiqah Front-end Team
+ * Licensed under MIT (https://thiqah.sa/)
+ * LinkedIn:: in/elbazz :: Mail
+ */
+
+//-----------------------------------------------
+// =====> main sass key
+$mainSiteLang: en;
+// active the next variable if you want arabic direction
+//$mainSiteLang : ar;
+//-----------------------------------------------
+// =====> main sass partial style
+$font-family-base: 'Poppins';
+$isWantDefinByFontFace: true;
+$fonts-map: (
+  (
+    family: '#{$font-family-base}',
+    weight: 100,
+    weightName: 'Thin',
+    path: '#{$font-family-base}/#{$font-family-base}',
+  ),
+  (
+    family: '#{$font-family-base}',
+    weight: 300,
+    weightName: 'Light',
+    path: '#{$font-family-base}/#{$font-family-base}',
+  ),
+  (
+    family: '#{$font-family-base}',
+    weight: 400,
+    weightName: 'Regular',
+    path: '#{$font-family-base}/#{$font-family-base}',
+  ),
+  (
+    family: '#{$font-family-base}',
+    weight: 500,
+    weightName: 'Medium',
+    path: '#{$font-family-base}/#{$font-family-base}',
+  ),
+  (
+    family: '#{$font-family-base}',
+    weight: 700,
+    weightName: 'Bold',
+    path: '#{$font-family-base}/#{$font-family-base}',
+  ),
+  (
+    family: '#{$font-family-base}',
+    weight: 800,
+    weightName: 'ExtraBold',
+    path: '#{$font-family-base}/#{$font-family-base}',
+  ),
+  (
+    family: '#{$font-family-base}',
+    weight: 900,
+    weightName: 'Black',
+    path: '#{$font-family-base}/#{$font-family-base}',
+  ),
+);
+
+@import '../main';

@@ -30,7 +30,17 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles/styles.scss",
+              {
+                "input": "src/styles/ds/dist/ltr.scss",
+                "bundleName": "ltr-style",
+                "inject": false
+              },
+              {
+                "input": "src/styles/ds/dist/rtl.scss",
+                "bundleName": "rtl-style",
+                "inject": false
+              }
             ],
             "scripts": []
           },
@@ -100,5 +110,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }

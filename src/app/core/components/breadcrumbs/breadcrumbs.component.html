@@ -1,0 +1,21 @@
+<div class="header-breadcrumbs">
+  <div class="header-breadcrumbs-container">
+    <ng-container *ngFor="let item of crumbs; let last = last">
+      <ng-container [ngSwitch]="last">
+        <div *ngSwitchCase="false" class="header-breadcrumbs-item">
+          <a [routerLink]="item.link" class="header-breadcrumbs-link">
+            {{ item.title | translate | titlecase }}
+          </a>
+          <i class="header-breadcrumbs-chevron">
+            <img src="assets/images/icons/crumbs.svg" alt="" />
+          </i>
+        </div>
+        <div *ngSwitchCase="true" class="header-breadcrumbs-item is-last">
+          <a [routerLink]="item.link" class="header-breadcrumbs-link">
+            {{ item.title | translate | titlecase }}
+          </a>
+        </div>
+      </ng-container>
+    </ng-container>
+  </div>
+</div>
