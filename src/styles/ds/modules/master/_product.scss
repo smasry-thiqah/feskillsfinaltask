@@ -5,11 +5,18 @@
     display: flex;
     gap: $customGutter;
     justify-content: space-evenly;
+    @include media-breakpoint-down(lg) {
+      flex-direction: column;
+      gap: 1rem;
+    }
   }
 
   &-images {
     display: flex;
     gap: rem(30);
+    @include media-breakpoint-down(lg) {
+      flex-direction: column-reverse;
+    }
   }
   &-largeImage {
     max-width: 30vw;
@@ -23,6 +30,9 @@
       max-height: 100%;
       object-fit: contain;
     }
+    @include media-breakpoint-down(lg) {
+      max-width: initial;
+    }
   }
 
   &-imagesList {
@@ -32,6 +42,10 @@
     flex-grow: 0;
     flex-direction: column;
     gap: rem(32);
+    @include media-breakpoint-down(lg) {
+      flex-direction: row;
+      width: initial;
+    }
 
     &-item {
       width: rem(76);
@@ -212,6 +226,10 @@
     gap: rem(54);
     justify-content: center;
     margin-bottom: rem(36);
+    @include media-breakpoint-down(lg) {
+      gap: rem(16);
+      flex-wrap: wrap;
+    }
     &-title {
       font-size: rem(24);
       line-height: rem(36);
@@ -264,9 +282,15 @@
   &-list {
     display: flex;
     margin-bottom: rem(84);
+    @include media-breakpoint-down(lg) {
+      flex-wrap: wrap;
+    }
   }
   &-card {
     width: 25%;
+    @include media-breakpoint-down(lg) {
+      width: 50%;
+    }
     &-imageContainer {
       height: rem(300);
       display: flex;

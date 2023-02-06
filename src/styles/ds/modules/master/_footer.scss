@@ -5,11 +5,17 @@
       justify-content: space-between;
       padding-top: rem(48);
       padding-bottom: rem(48);
+      @include media-breakpoint-down(lg) {
+        flex-direction: column;
+        gap: rem(16);
+      }
       .footer-section {
         .footer-section-form {
           display: flex;
           gap: rem(12);
-          padding-#{$right}: $customGutter;
+          @include media-breakpoint-up(lg) {
+            padding-#{$right}: $customGutter;
+          }
           input,
           button {
             border: none;
@@ -19,6 +25,9 @@
           }
           input {
             width: 80%;
+            @include media-breakpoint-down(lg) {
+              width: 100%;
+            }
           }
           button {
             color: black;
@@ -30,11 +39,18 @@
           font-weight: 500;
           font-size: rem(16);
           color: #9f9f9f;
-          margin-bottom: rem(55);
+          @include media-breakpoint-up(lg) {
+            margin-bottom: rem(55);
+          }
+          @include media-breakpoint-down(lg) {
+            margin-bottom: rem(16);
+          }
         }
         .footer-section-content {
           display: flex;
-          flex-direction: column;
+          @include media-breakpoint-up(lg) {
+            flex-direction: column;
+          }
           gap: rem(46);
           .footer-section-link {
             color: black;

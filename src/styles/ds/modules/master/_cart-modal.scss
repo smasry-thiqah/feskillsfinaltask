@@ -1,6 +1,8 @@
 .cartModal {
   &-dialog {
-    width: rem(417);
+    @include media-breakpoint-up(lg) {
+      width: rem(417);
+    }
     margin-#{$right}: 0;
     margin-#{$left}: auto;
   }

@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg header-navbar">
   <button
-    class="navbar-toggler"
+    class="navbar-toggler header-collapseBtn"
     type="button"
     data-bs-toggle="collapse"
     data-bs-target="#navbarTogglerDemo01"
@@ -8,26 +8,37 @@
     aria-expanded="false"
     aria-label="Toggle navigation"
   >
-    <span class="navbar-toggler-icon"></span>
+    <span class="navbar-toggler-icon header-collapseBtn-icon">
+      <i class="fa-regular fa-bars"></i>
+    </span>
   </button>
   <div
-    class="collapse navbar-collapse justify-content-center"
+    class="collapse header-collapsibleMenu navbar-collapse justify-content-xl-center justify-content-start"
     id="navbarTogglerDemo01"
   >
     <ul class="navbar-nav mb-2 mb-lg-0 header-navlist">
       <li class="nav-item">
-        <a class="nav-link header-link active" aria-current="page" href="#">{{
-          "home" | translate
+        <a
+          class="nav-link header-link p-0 active"
+          aria-current="page"
+          href="#"
+          >{{ "home" | translate }}</a
+        >
+      </li>
+      <li class="nav-item">
+        <a class="nav-link header-link p-0" href="#">{{
+          "shop" | translate
         }}</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link header-link" href="#">{{ "shop" | translate }}</a>
+        <a class="nav-link header-link p-0" href="#">{{
+          "about" | translate
+        }}</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link header-link" href="#">{{ "about" | translate }}</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link header-link" href="#">{{ "contact" | translate }}</a>
+        <a class="nav-link header-link p-0" href="#">{{
+          "contact" | translate
+        }}</a>
       </li>
     </ul>
   </div>

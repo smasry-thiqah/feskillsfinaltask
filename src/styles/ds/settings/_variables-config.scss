@@ -42,4 +42,4 @@ $btn-font-weight: 700;
 $btn-line-height: 22px;
 $btn-border-radius: 6px;
 
-$customGutter: rem(100);
+$customGutter: var(--custom-gutter);

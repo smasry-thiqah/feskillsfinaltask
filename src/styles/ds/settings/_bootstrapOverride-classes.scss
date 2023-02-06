@@ -68,5 +68,16 @@ $input-group-inside-top: rem(10);
 }
 
 .container-fluid {
-  padding-inline: 100px;
+  @include media-breakpoint-up(lg) {
+    padding-inline: 100px;
+  }
+}
+
+:root {
+  @include media-breakpoint-up(lg) {
+    --custom-gutter: #{rem(100)};
+  }
+  @include media-breakpoint-down(lg) {
+    --custom-gutter: #{rem(54)};
+  }
 }

@@ -1,6 +1,11 @@
 .header {
   display: block;
-  padding-inline: $customGutter;
+  @include media-breakpoint-up(lg) {
+    padding-inline: $customGutter;
+  }
+  @include media-breakpoint-down(lg) {
+    height: calc(2 * $customGutter);
+  }
   .header-container {
     display: flex;
     flex-direction: column;
@@ -10,9 +15,35 @@
       flex-grow: 1;
       flex-shrink: 1;
     }
+    @include media-breakpoint-down(lg) {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: white;
+      border-bottom: 1px solid black;
+      z-index: 2;
+    }
     .header-navbar {
       width: 100%;
       height: $customGutter;
+      .header-collapseBtn {
+        &:focus {
+          outline: 0;
+          box-shadow: none;
+        }
+        &-icon {
+          display: grid;
+          place-items: center;
+        }
+      }
+      .header-collapsibleMenu {
+        @include media-breakpoint-down(lg) {
+          width: 100vw;
+          height: calc(100vh - $customGutter);
+          background: white;
+          padding: 1rem;
+        }
+      }
       .header-navlist {
         gap: rem(60);
         .header-link {
@@ -41,6 +72,9 @@
       height: $customGutter;
       display: flex;
       align-items: center;
+      @include media-breakpoint-down(lg) {
+        padding-inline: 1rem;
+      }
       .header-breadcrumbs-container {
         display: flex;
         .header-breadcrumbs-item {
